@@ -43,7 +43,8 @@ def getCandidateStr(syn_sent):
 
 fout = open("candidate_words.txt", "w", encoding = "utf-8")
 
-sent = "survivorship health interventions and exercise lifestyle data".split(" ")
+input_sent = input("Please enter a name with key points of your study (don't worry about the acronym part):\n")
+sent = input_sent.lower().split(" ")
 syn_sent = getSynWords(sent)
 candidate_strs = getCandidateStr(syn_sent)
 already_considered_str = set()
